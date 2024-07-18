@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Processos dos Colaboradores</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Histórico de Processos Pesquisados</h2>
+            <div id="historico" class="historico"></div>
+        </div>
+        <div class="main-content">
+            <img src="img/logo Pixfibra.png" alt="Pixfibra Logo" class="logo">
+            <h1>Bem-vindo!</h1>
+            <p>Escolha a área:</p>
+            <select id="area">
+                <option value="">Selecione uma área</option>
+                <option value="rh">RH</option>
+                <option value="financeiro">Financeiro</option>
+            </select>
+            <button onclick="escolherArea()">Enviar</button>
+
+            <div id="colaborador-section" class="processo-section">
+                <p>Escolha qual colaborador você quer ver o processo ou selecione 'Sair' para encerrar:</p>
+                <select id="colaborador">
+                    <option value="">Selecione um colaborador</option>
+                </select>
+                <button onclick="escolherColaborador()">Enviar</button>
+            </div>
+
+            <div id="processo-section-paula" class="processo-section">
+                <p>Qual processo de Paula Campos você quer visualizar?</p>
+                <select id="processo-paula">
+                    <option value="1">Controle de férias</option>
+                    <option value="2">Controle de Rescisão</option>
+                    <option value="3">Controle de admissões</option>
+                </select>
+                <button onclick="mostrarProcessoPaula()">Mostrar Processo</button>
+            </div>
+
+            <div id="processo-section-carlos" class="processo-section">
+                <p>Qual processo de Carlos você quer visualizar?</p>
+                <select id="processo-carlos">
+                    <option value="4">Atendimento ao cliente</option>
+                    <option value="5">Atendimento aos vendedores</option>
+                    <option value="6">Manutenção da loja</option>
+                </select>
+                <button onclick="mostrarProcessoCarlos()">Mostrar Processo</button>
+            </div>
+
+            <div id="processo-section-joao" class="processo-section">
+                <p>Qual processo de João Silva você quer visualizar?</p>
+                <select id="processo-joao">
+                    <option value="7">Processo X</option>
+                    <option value="8">Processo Y</option>
+                </select>
+                <button onclick="mostrarProcessoJoao()">Mostrar Processo</button>
+            </div>
+
+            <div id="processo-section-auxiliar-contabil" class="processo-section">
+                <p>Qual processo de Auxiliar Contábil você quer visualizar?</p>
+                <select id="processo-auxiliar-contabil">
+                    <option value="9">Admissão</option>
+                    <option value="10">Rescisão</option>
+                    <option value="11">Férias</option>
+                    <option value="12">Vale-transporte</option>
+                    <option value="13">Vale Alimentação</option>
+                    <option value="14">Ponto eletrônico</option>
+                    <option value="15">Sorriso para todos</option>
+                    <option value="16">Taxa negocial</option>
+                    <option value="17">Folha de pagamento</option>
+                    <option value="18">Declaração DCTF Web</option>
+                    <option value="19">DCTF Mensal</option>
+                    <option value="20">Pis e Cofins</option>
+                    <option value="21">Contestação de notas da Sefaz</option>
+                    <option value="22">Fechamento de trimestre</option>
+                    <option value="23">Conferência contábil</option>
+                </select>
+                <button onclick="mostrarProcessoAuxiliarContabil()">Mostrar Processo</button>
+            </div>
+
+            <div id="processo-section-auxiliar-administrativo" class="processo-section">
+                <p>Qual processo de Auxiliar Administrativo você quer visualizar?</p>
+                <select id="processo-auxiliar-administrativo">
+                    <option value="24">Subir as notas</option>
+                    <option value="25">Enviar pagamentos para Honda</option>
+                    <option value="26">Processo de retirada de motos</option>
+                    <option value="27">Entrada de motos</option>
+                    <option value="28">Faturamento de motos</option>
+                    <option value="29">Faturamento de motos para Honda</option>
+                    <option value="30">Envio de planilha de fechamento do dia para gestor</option>
+                    <option value="31">Envio da cota</option>
+                    <option value="32">Taxa de correção</option>
+                    <option value="33">Fechamento do mês</option>
+                </select>
+                <button onclick="mostrarProcessoAuxiliarAdministrativo()">Mostrar Processo</button>
+            </div>
+
+            <div id="processo-section-gerente-geral" class="processo-section">
+                <p>Qual processo de Gerente Geral você quer visualizar?</p>
+                <select id="processo-gerente-geral">
+                    <option value="34">Examinar estrutura da loja</option>
+                    <option value="35">Reunião diária com grupo e gestores</option>
+                    <option value="36">Treinamentos</option>
+                    <option value="37">Preparação de gestores</option>
+                    <option value="38">Acompanhamento de estoque</option>
+                    <option value="39">IHS consórcio Honda</option>
+                    <option value="40">Verificação de carteira da concessionária</option>
+                    <option value="41">Verificação de vendas diárias</option>
+                    <option value="42">Projeto com a Honda</option>
+                </select>
+                <button onclick="mostrarProcessoGerenteGeral()">Mostrar Processo</button>
+            </div>
+
+            <div id="processo-section-operador-caixa" class="processo-section">
+                <p>Qual processo de Operador de Caixa você quer visualizar?</p>
+                <select id="processo-operador-caixa">
+                    <option value="43">Análise de pagamentos</option>
+                    <option value="44">Passar folhas</option>
+                    <option value="45">Passamento de fichas aos bancos</option>
+                    <option value="46">Recebimento do carnê</option>
+                </select>
+                <button onclick="mostrarProcessoOperadorCaixa()">Mostrar Processo</button>
+            </div>
+
+            <pre id="resultado"></pre>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

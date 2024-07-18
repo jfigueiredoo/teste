@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2a2a2a;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 300px;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    color: #4a90e2;
+}
+
+.main-content {
+    padding: 20px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #2d73c3;
+}
+
+select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2d73c3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #14538a;
+}
+
+.processo-section {
+    display: none;
+    margin-top: 20px;
+}
+
+pre {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: left;
+    white-space: pre-wrap;
+}
+
+.historico {
+    margin-top: 20px;
+}
+
+.historico-item {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-left: 3px solid #2d73c3;
+    background-color: #fff;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.historico-item:hover {
+    background-color: #e9e5e5;
+}
+
+.historico-detalhes {
+    display: none;
+    padding: 5px;
+    border-left: 3px solid #2d73c3;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    margin-top: 5px;
+    white-space: pre-wrap;
+}
